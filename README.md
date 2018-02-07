@@ -1,2 +1,2 @@
-# springboot
-springboot basic framework
+# springboot basic framework
+springboot+jpa+druid+mysql+redis

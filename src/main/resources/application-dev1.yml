@@ -1,0 +1,15 @@
+spring:
+  # 数据源
+  datasource:
+    # mysql
+    url: jdbc:mysql://100.100.100.10:3306/springboot?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: admin
+  # REDIS (RedisProperties)
+  redis:
+    # Redis服务器地址
+    host: 192.168.1.110
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: 

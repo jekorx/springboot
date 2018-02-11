@@ -1,5 +1,8 @@
 package com.spring.boot.entities;
 
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,6 +21,8 @@ public class Person {
 	@Min(value = 18, message = "未满18周岁")
 	private int age;
 	private String sex;
+	@Column(name = "create_time")
+	private Date createTime;
 	public Person() {
 		
 	}
@@ -45,8 +50,10 @@ public class Person {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	@Override
-	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", sex=" + sex + "]";
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 }

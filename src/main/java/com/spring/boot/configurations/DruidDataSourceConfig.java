@@ -30,7 +30,7 @@ public class DruidDataSourceConfig {
 	 * @param properties
 	 * @return DruidDataSource
 	 */
-	@Bean
+	@Bean(destroyMethod = "close", initMethod = "init")
 	@ConfigurationProperties("spring.datasource.druid")
 	public DruidDataSource dataSource(DataSourceProperties properties) {
 		
